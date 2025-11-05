@@ -4,16 +4,28 @@ Enterprise-ready Next.js foundation for an AI data platform serving highly regul
 
 ## Getting Started
 
-```bash
-npm install
-npm run dev
-```
+1. Ensure you are running **Node.js 18.17+** and npm 9+ (use `nvm use` if available).
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Copy environment variables template and populate required secrets:
+   ```bash
+   cp .env.example .env.local
+   # edit .env.local with Azure AD, Stripe, and Sentry values
+   ```
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+   The app boots on http://localhost:3000 by default.
 
 Key scripts:
 - `npm run lint` – eslint with strict accessibility presets.
 - `npm run test` – Vitest unit tests (placeholder).
 - `npm run test:e2e` – Playwright e2e suite (to be implemented).
 - `npm run typecheck` – TypeScript project references (for typed JS via JSDoc).
+- `npm run build` – production build for deployment.
 
 ## Project Highlights
 - **App Router & Edge ready**: App routes for Azure AD Auth.js, Stripe webhooks, SSE streaming.
