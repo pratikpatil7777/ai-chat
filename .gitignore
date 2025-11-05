@@ -1,0 +1,9 @@
+node_modules
+.next
+out
+.env*
+coverage
+playwright-report
+*.log
+.DS_Store
+
